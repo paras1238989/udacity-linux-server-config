@@ -73,16 +73,16 @@ sudo apt-get upgrade
   ```
   Status: active
   
-To                         Action      From
---                         ------      ----
-2200/tcp                   ALLOW       Anywhere                  
-80/tcp                     ALLOW       Anywhere                  
-123/udp                    ALLOW       Anywhere                  
-22                         DENY        Anywhere                  
-2200/tcp (v6)              ALLOW       Anywhere (v6)             
-80/tcp (v6)                ALLOW       Anywhere (v6)             
-123/udp (v6)               ALLOW       Anywhere (v6)             
-22 (v6)                    DENY        Anywhere (v6) 
+  To                         Action      From
+  --                         ------      ----
+  2200/tcp                   ALLOW       Anywhere
+  80/tcp                     ALLOW       Anywhere
+  123/udp                    ALLOW       Anywhere
+  22                         DENY        Anywhere
+  2200/tcp (v6)              ALLOW       Anywhere (v6)
+  80/tcp (v6)                ALLOW       Anywhere (v6)
+  123/udp (v6)               ALLOW       Anywhere (v6)
+  22 (v6)                    DENY        Anywhere (v6)
   ```
 
 - Exit the SSH connection: `exit`.
