@@ -302,7 +302,7 @@ http://13.229.112.45.xip.io as authorized JavaScript origins.
 following lines to configure the virtual host:
 
   ```
-<VirtualHost *:80>
+  <VirtualHost *:80>
     ServerName 13.229.112.45
     WSGIScriptAlias / /var/www/catalog/catalog.wsgi
     <Directory /var/www/catalog/catalog/>
@@ -317,7 +317,7 @@ following lines to configure the virtual host:
     ErrorLog ${APACHE_LOG_DIR}/error.log
     LogLevel warn
     CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>
+  </VirtualHost>
   ```
 
 - Enable virtual host: `sudo a2ensite catalog`. The following prompt will be returned:
@@ -339,15 +339,15 @@ following lines to configure the virtual host:
 
   ```
   #!/usr/bin/python
-import sys
-import logging
-logging.basicConfig(stream=sys.stderr)
-sys.path.insert(0, "/var/www/catalog/catalog/")
-sys.path.insert(1, "/var/www/catalog/")
+  import sys
+  import logging
+  logging.basicConfig(stream=sys.stderr)
+  sys.path.insert(0, "/var/www/catalog/catalog/")
+  sys.path.insert(1, "/var/www/catalog/")
 
-from catalog import app as application
-application.secret_key = "..."
-```
+  from catalog import app as application
+  application.secret_key = "..."
+  ```
 
 - Restart Apache: `sudo service apache2 restart`.
 
@@ -372,4 +372,3 @@ The following prompt will be returned:
 
 - Restart Apache again: `sudo service apache2 restart`.
 - Open your browser to http://13.229.112.45.xip.io/ .
-
